@@ -8,6 +8,11 @@ def finder(files, queries):
     """
     # Your code here
 
+    result = []
+    for i in files:
+        for o in queries:
+            if i.rsplit('/',1)[1] == o:
+                result.append(i)
     return result
 
 
