@@ -6,10 +6,6 @@ def has_negatives(a):
     i = 0
     step = []
     result = []
-    # for i in a:
-    #    if i > 0:
-    #        if i * -1 in a:
-    #            result.append(i)
     a = sorted(a)
     while a[i] < 0 and i < len(a) - 1:
         step.append(a[i])

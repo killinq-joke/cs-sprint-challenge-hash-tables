@@ -7,12 +7,16 @@ def finder(files, queries):
     YOUR CODE HERE
     """
     # Your code here
-
     result = []
+    table = {}
+
+    for i in queries:
+        table[i] = True
+    
     for i in files:
-        for o in queries:
-            if i.rsplit('/',1)[1] == o:
-                result.append(i)
+        if i.rsplit('/',1)[1] in table:
+            result.append(i)
+
     return result
 
 
